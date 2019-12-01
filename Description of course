@@ -1,0 +1,139 @@
+Libraries used-
+numpy -> Mathematical work.
+matplotlib.pyplot -> Plotting.
+pandas -> Import and manage datasets.
+sklearn.preprocessing -> Used to manage data (missing fields and categorize data).
+
+
+Video short summary- 
+
+>SECTION 2:
+
+import libraries -> Import statements are written.
+import datasets -> Dataset is read using pd.read_csv('filename') and we make X independent variable and y dependent variable tables using iloc.
+missing data -> Imputer subclass is used to identify missing field and replacing it by mean of the remaining fields.
+categorical data -> fit_transform method of LabelEncoder and OneHotEncoder subclass's is used to convert categorical variables(text) to numbers.(dummy variables)
+splitting data -> from cross_validataion library train_test_split is used to make test set and the train set.
+feature scaling -> StandardScaler is used to scale the data in range of 0 to 1 to improve accuracy.
+
+>SECTION 4:
+
+simple linear regression intuition -> y = m*x + c  or  y = b0 + b1x1
+									  y - dependent variable
+									  x - independent variable
+									  b1 - coefficient of x
+									  b0 - constant
+
+
+simple linear regression using python - Test and train sets are made.
+										Fitting slr to training set using LinearRegression.(regressor.fit is used)
+										Predicting the test set results using [y_pred is the vector containing predictions of dependent 		variable(in this case salary of all test cases)].(regressor.predict is used)
+										Visualising the training test data results using matplotlib.pyplot.
+
+>>SECTION 5:
+Buisness problem ->
+					50 startups info given:
+					1.profits[dependent var]. 
+					2.administration cost[independent var]. 
+					3.R and D Spend[independent var].
+					4.Marketing Spend[independent var]. 
+					5.State.
+						
+					Goal is to find startup that is:
+									1. Where companies perform better ?
+									2. How much do the the good companies spend money ?
+									3. Companies spend more on R and D or Marketing ?( Better results of profit )
+
+Step 1 ->
+			MLR equation -> y = b0 + b1*x1 + b2*x2 +...+ bn*xn
+
+Step 2 ->	Assumptions of linear regression-
+			1.Linearity.
+			2.Homoscedaticity.
+			3.Multivariate normality.
+			4.Independance of errors.
+			5.Lack of multicollinearity.
+
+Step 3 ->	Assigning dummy varibles.
+			y = b0 			+ 	b1*x1 		+ 		b2*x2     +  b3*x3     +   b4*D1 
+				profits 		R&d Spend 		   admin        Marketing 		State
+			
+			Here we assigned variables to the data .
+			
+			The state variable is categorical so we made dummy variable(D1) so that we can use it in our equation.(1-new york , 0- california)
+
+Step 4 ->	Dummy variable trap -   Always omit one dummy variable.
+									Model gets confused between b0 , b4 and b5(if you don't omit) as all point towards the same thing.
+
+P - Value -> It tells us the probability of getting that result if H0 is true. 
+This refers to the Hypothesis test-
+H0 - Null Hypothesis
+H1 - Alternative Hypothesis.
+if p value small -> it suggests(gives strong evidence) that results are significantly different from H0 , hence is wrong.
+if p value large -> it suggests H0 is probably correct but isn't confirmed (unconfirmed / no evidence).
+The p-value is NOT the probability the claim is true. 
+The p-value is NOT the probability the null hypothesis is true.
+
+Step 5 ->
+			Methods of building a model-
+			1.All-in.
+			2.backward elimination.			|
+			3.Forward selection.			|-> Aka Stepwise regression.
+			4.Bidirectional Elimination.	|
+			5.Score Comparism.
+
+
+			All-in -> 	Add all variables in .
+						Done if prior knowledge about variables being the predictors.
+
+			Backward elimination -> 
+				Steps:
+				1. Select a significane level(SL) to stay in model.
+				2. Fit the model with all predictors(all-in).
+				3. Consider predictor with highets p-value(P) if P>SL go to step 4 or else finish.
+				4. Remove that predictor.
+				5. Fit the model without this predictor(We have to rebuilt the whole model again without that said variable).
+				
+				Continue steps 3 to 5 till P<SL is satisfied ie the highest p-value of the variables in the model is less than the significane level initially decided.
+
+				Once satisfied the model is ready .(all var left have P<SL)
+
+			Forward selection ->
+				Steps:
+				1. Select a significane level(SL) to stay in model.
+				2. Fit a simple reg model for each variable  ie y ~ x1, y ~ x2, ... y ~ xn. Select the model with lowest p-value.
+				3. Now contruct all 2 variable linear reg cases keeping 1 var constant ie the above selected var(from the selected model).
+ 				4. Consider the predictor with the lowest p-value . If P < SL go to step 3 or else Finish.
+
+ 				Continue steps 3 and 4 till the condition  P > SL satisfies and when it does "KEEP THE PREVIOUS MODEL" that consists of all p-values < SL .
+
+ 			Bidirectional Elimination-
+ 				Step:
+ 				1. Select a significane level to enter(SLENTER) and stay(SLSTAY) in model.[Genearlly 5% ie 0.05]
+ 				2. Do Forward selection:
+ 						Regress Y on each predictor var and predictor var with lowest p value is added to the model as long as P < SLENTER.
+ 				3. Do Backward elimination:
+ 						Since p values change as additional predictor variables are added, you have to check to see if any of the predictor variables in the model now have a p value greater than PEXIT , if so then remove the var that has highest p-value.
+ 				4. Repeat steps 2 and 3 till no new varibles can enter and no old variables can exit.
+ 				5. Model is ready.
+
+
+In brief -
+(1) Forward selection : It builds model by selecting the variables, one by one, which have lowest p-value less than significance level. (In other words, select a variable, which best improves the model).
+
+(2) Backward elimination : It starts with all variables, and then removes one variable at a time, which has highest p-value greater than significance level. In other words, remove variable, that is least required in the model.
+
+(3) Bidirectional elimination : Refer https://www.spcforexcel.com/knowledge/root-cause-analysis/stepwise-regression 
+
+			All possible models-(Most thorough but most resource req.)  
+				Steps-
+				1. Select a criteria of goodness of fit ()
+				2.
+				3.
+
+Refernce above->
+Goodness of fit:
+The goodness of fit test is a statistical hypothesis test to see how well sample data fit a distribution from a population with a normal distribution. 
+Put differently, this test shows if your sample data represents the data you would expect to find in the actual population or if it is somehow skewed.
+Goodness-of-fit tests are statistical tests aiming to determine whether a set of observed values match those expected under the applicable model.
+
