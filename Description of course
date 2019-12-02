@@ -7,7 +7,7 @@ sklearn.preprocessing -> Used to manage data (missing fields and categorize data
 
 Video short summary- 
 
->SECTION 2:
+### SECTION 2 ###
 
 import libraries -> Import statements are written.
 import datasets -> Dataset is read using pd.read_csv('filename') and we make X independent variable and y dependent variable tables using iloc.
@@ -16,7 +16,7 @@ categorical data -> fit_transform method of LabelEncoder and OneHotEncoder subcl
 splitting data -> from cross_validataion library train_test_split is used to make test set and the train set.
 feature scaling -> StandardScaler is used to scale the data in range of 0 to 1 to improve accuracy.
 
->SECTION 4:
+### SECTION 4 ###
 
 simple linear regression intuition -> y = m*x + c  or  y = b0 + b1x1
 									  y - dependent variable
@@ -30,7 +30,7 @@ simple linear regression using python - Test and train sets are made.
 										Predicting the test set results using [y_pred is the vector containing predictions of dependent 		variable(in this case salary of all test cases)].(regressor.predict is used)
 										Visualising the training test data results using matplotlib.pyplot.
 
->>SECTION 5:
+### SECTION 5 ###
 Buisness problem ->
 					50 startups info given:
 					1.profits[dependent var]. 
@@ -131,9 +131,29 @@ In brief -
 				2.
 				3.
 
-Refernce above->
+Reference above->
 Goodness of fit:
 The goodness of fit test is a statistical hypothesis test to see how well sample data fit a distribution from a population with a normal distribution. 
 Put differently, this test shows if your sample data represents the data you would expect to find in the actual population or if it is somehow skewed.
 Goodness-of-fit tests are statistical tests aiming to determine whether a set of observed values match those expected under the applicable model.
 
+
+Multi Linear Regression in python:
+		> Preprocessing template is used. 
+			- Encoding of dummy variable is done.
+			- Splitting of data
+		> Fitting MultiLinear Reg is done.
+		> Predicting the test set results.
+		> Backward Elimination is done using statsmodel.formula.api (homework).
+		> Code for Automatic Backward Elimination is discussed.
+
+
+
+### SECTION 6 ###
+
+Polynomial Linear regression inuition :
+	
+		y = b0 + b1*x1 + b2*x1^2 + b3*x1^3 ...
+
+
+		
