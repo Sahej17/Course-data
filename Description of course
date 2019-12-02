@@ -156,4 +156,68 @@ Polynomial Linear regression inuition :
 		y = b0 + b1*x1 + b2*x1^2 + b3*x1^3 ...
 
 
-		
+	Step 1:
+			> Set working directory .
+			> Add Preprocessing template.
+			> Dataset name updated "position_salaries.csv". [position, level, salary]
+			> Problem Statement - You are human resource team working for a big company and are about to hire a new employee in this company. Now the offer is mad eand negotaition starts about the salary of the future employee. he tells his salary of the last company and expects to be paid more than that. To verify this they contact the previous company and in response they get a list of positions and the salary. One of the HR guy says he can build a bluffing detector to verify the guys statement using polynomial regression. As the levels increase the salary increase . The levels are 1-10 and this model is used to find salary at level 6.5 .
+			> Only 2 column are need :
+				Level and Salary as only they are correlated and useful to find the result.
+				Level is x and salary is y.
+
+	Step 2:
+			> Tables are made for x and y from the dataset.
+			> As we have to make very accurate prediction and there are very low cases. We can't train the model in this case.
+			> No additional feature scaling.
+			> We are building linear reg and poly reg to compare both models.
+			> For poly reg new class is used:
+				from sklearn.preprocessing import PolynomialFeatures
+			> An object is made that will be a transformer to tool that transforms a matrix of X to a matrix of exponentially increasing X values    [X_poly].
+			> PolynomialFeatures(degree = 2) 2 stands for 2-dimensional.
+			> In linear reg fit method is used but here we use fit_transform method to transform object to x and then transform X to X_poly
+			> Now an lin model is created using (X_poly, y) which is our poly reg model.
+
+	Step 3:
+			> Visualizing the linear reg and poly reg model.
+			> plt.scatter is used to plot the graph. 
+			> A colour is added to distinguish between the dataset graph and model of the graph.(red - dataset, blue - model)
+			> Linear Reg:
+						plt.scatter(X, y, color = 'red')
+						plt.plot(X, lin_reg.predict(X), color = 'blue')
+						plt.title("Truth or Bluff linear reg") 
+						plt.xlabel('Position level')
+						plt.ylabel('Salary')
+						plt.show()
+			> Poly Reg:
+						plt.scatter(X, y, color = 'red')
+						plt.plot(X, lin_reg2.predict(X_poly), color = 'blue')
+						plt.title("Truth or Bluff Poly reg") 
+						plt.xlabel('Position level')
+						plt.ylabel('Salary')
+						plt.show()
+
+			> Here, X_poly and lin_reg2 is taken .
+			> Model is much better than lin reg but to improve it further we add a degree to the model .(degree = 3)
+			> At degree = 4 we get a perfect graph plotting all points exactly. 
+			> X_grid is added to improve accuracy.
+			> Arrange and reshape are used here.
+
+	Step 4:
+			> Predicting the result.
+			
+			> Linear reg :
+						lin_reg.predict(6.5)
+			
+			> Poly reg :
+						lin_reg2.predict(poly_reg.fit_transform(6.5))
+			
+			> He said 160k salary and result is 158k salary so bluff is true.
+
+	Regression template:
+
+			> 
+
+
+
+
+
