@@ -213,10 +213,11 @@ Polynomial Linear regression inuition :
 			
 			> He said 160k salary and result is 158k salary so bluff is true.
 
-	Regression template:
+	Regression template is a made .
+			
+			> Importing dataset, Splitting od dataset, Feature scaling, Fitting of the model, Predicting of new result and Visualizing of result     (plotting).
 
-			> 
-
+			> We created an additional part where we can opt for higher resolution and smoother curve using np.arrange and np.reshape.
 
 
 
