@@ -217,7 +217,38 @@ Polynomial Linear regression inuition :
 			
 			> Importing dataset, Splitting od dataset, Feature scaling, Fitting of the model, Predicting of new result and Visualizing of result     (plotting).
 
-			> We created an additional part where we can opt for higher resolution and smoother curve using np.arrange and np.reshape.
+			> We created an additional part where we can opt for higher resolution and smoother curve using np.arrange and np.reshape.s
+
+
+### SECTION 7 ###
+
+SVR Inuition:
+		
+		> SVR supports both linear and non linear reg.
+		> Main keywords used are :
+				Kernel, Hyperplane, boundary line, epsilon(e), margin .
+
+SVR python code: 
+		
+		> Pre processing template.(feature scaling must be done as it is not included in svr class)
+		> from sklearn.svm import svr
+		> Types of kernel:(kernel - function used to map lower dimension data into high dimension data.)
+				1. default = rbf.
+				2. poly.
+				3. linear.
+				4. sigmoid.
+				5. precomputed or callable.
+		> To find the excat salary transform method is used.
+		> In the argument we have to add a array value so, 6.5 is converted to numpy array np.array(([6.5])).
+		> Prediction of original scale is obtained by using inverse of the sv_y variable.
+		
+
+
+
+
+
+
+
 
 
 
