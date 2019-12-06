@@ -243,6 +243,32 @@ SVR python code:
 		> Prediction of original scale is obtained by using inverse of the sv_y variable.
 		
 
+### SECTION 8 ###
+
+Decision trees Regression
+
+	Intuition:
+
+		> Predict y with 2 independent var x1 and x2.
+		> y is in 3-dimension and x1 & x2 are plotted in x and y axis respectively.
+		> Once algo is run splits are made which divides the plot in segments(leaf).
+		> How and where to do the split is done by the algo(aka information entropy).
+		> The splits are made in such a way that the min req of worst cases are not exceeded in the leaf.
+		> IMP: How to find an unknown value of an coordinate in graph ?
+				All cases in one leaf are averaged and so if the your point falls in that region/leaf then that is your answer.
+	
+	Code :
+
+		> Data preprocessing done in regrssion template.
+		> Fitting decision tree regressor:
+				from sklearn.tree import DecisionTreeRegressor
+				regressor = DecisionTreeRegressor(random_state = 0)
+		> Random_state = 0 is done so that all get the same result and all other para are default.
+		> Regressor is fitted.
+		> Non linear and non continous regression model.
+		> Best way to visualize these model is to visualize them in "higher resolution"(code written).
+		
+
 
 
 
