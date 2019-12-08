@@ -269,4 +269,11 @@ Evaluating Regression Models Performance.
 	R-Squared Intuition:
 
 		> R-Squared, also known as the Coefficient of Determination, is a value between 0 and 1 that measures how well our regression line fits our data. R-Squared can be interpreted as the percent of variance in our dependent variable that can be explained by our model.
+		> R^2 = 1 - (SSres / SStot)
+		> R-Squared checks to see if our fitted regression line will predict y better than the mean will.
+		> Aim to minimize SSresidual. Closer to 1 is better.
+	
+	Adjusted R-Squared Intuition:
+
+		> Similar to R-squared, the Adjusted R-squared measures the variation in the dependent variable (or target), explained by only the features which are helpful in making predictions. Unlike R-squared, the Adjusted R-squared would penalize you for adding features which are not useful for predicting the target.
 		> 
