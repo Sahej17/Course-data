@@ -263,3 +263,10 @@ Random Forest Regression:
 
 
 ### SECTION 10 ###
+
+Evaluating Regression Models Performance.
+
+	R-Squared Intuition:
+
+		> R-Squared, also known as the Coefficient of Determination, is a value between 0 and 1 that measures how well our regression line fits our data. R-Squared can be interpreted as the percent of variance in our dependent variable that can be explained by our model.
+		> 
