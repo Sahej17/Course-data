@@ -125,11 +125,6 @@ In brief -
 
 (3) Bidirectional elimination : Refer https://www.spcforexcel.com/knowledge/root-cause-analysis/stepwise-regression 
 
-			All possible models-(Most thorough but most resource req.)  
-				Steps-
-				1. Select a criteria of goodness of fit ()
-				2.
-				3.
 
 Reference above->
 Goodness of fit:
@@ -243,39 +238,28 @@ SVR python code:
 		> Prediction of original scale is obtained by using inverse of the sv_y variable.
 		
 
-### SECTION 8 ###
+### SECTION 9 ###
 
-Decision trees Regression
-
-	Intuition:
-
-		> Predict y with 2 independent var x1 and x2.
-		> y is in 3-dimension and x1 & x2 are plotted in x and y axis respectively.
-		> Once algo is run splits are made which divides the plot in segments(leaf).
-		> How and where to do the split is done by the algo(aka information entropy).
-		> The splits are made in such a way that the min req of worst cases are not exceeded in the leaf.
-		> IMP: How to find an unknown value of an coordinate in graph ?
-				All cases in one leaf are averaged and so if the your point falls in that region/leaf then that is your answer.
+Random Forest Regression:
 	
-	Code :
-
-		> Data preprocessing done in regrssion template.
-		> Fitting decision tree regressor:
-				from sklearn.tree import DecisionTreeRegressor
-				regressor = DecisionTreeRegressor(random_state = 0)
-		> Random_state = 0 is done so that all get the same result and all other para are default.
-		> Regressor is fitted.
-		> Non linear and non continous regression model.
-		> Best way to visualize these model is to visualize them in "higher resolution"(code written).
+	Intuition:
 		
+		> It is a version of ensemble learning(combining algo's or repetative addition of same algo's to form a much powerful model as compared to the original basic model).
+		> Steps:
+			1. Pick k data points from training set.
+			2. Build the decision tree associated to thesek data points.
+			3. Choose the number of trees you want to build and repeat steps 1 & 2.
+			4. For a new data point, make each one of your N trees predict the value of Y for the data in question. And assign the new data point the average accross all of the predicted Y values.
+
+	Code in python:
+
+		> Set working directory.
+		> Take regression template.
+		> Import Class, create class object and fit model.
+		> from sklearn.ensemble import RandomForestRegressor 
+		> Parameters used n_estimator & random_state.
+		> Non continous model received.
+		> Tested on different no. of estimators(10, 100 & 300).
 
 
-
-
-
-
-
-
-
-
-
+### SECTION 10 ###
