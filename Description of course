@@ -276,4 +276,5 @@ Evaluating Regression Models Performance.
 	Adjusted R-Squared Intuition:
 
 		> Similar to R-squared, the Adjusted R-squared measures the variation in the dependent variable (or target), explained by only the features which are helpful in making predictions. Unlike R-squared, the Adjusted R-squared would penalize you for adding features which are not useful for predicting the target.
+		> Greater is better.
 		> 
