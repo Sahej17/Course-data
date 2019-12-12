@@ -277,4 +277,30 @@ Evaluating Regression Models Performance.
 
 		> Similar to R-squared, the Adjusted R-squared measures the variation in the dependent variable (or target), explained by only the features which are helpful in making predictions. Unlike R-squared, the Adjusted R-squared would penalize you for adding features which are not useful for predicting the target.
 		> Greater is better.
-		> 
+		> 1 variable is added -> R^2 will never decrease. It can be increase or reamin same.
+		> Adj. R^2 = 1 - (1 - R^2)*((n-1)/(n-p-1))
+		> p - No. of regressors(independent var.)
+		  n - Sample Size.
+	
+	Evaluated reg model performance:
+
+		> Adjusted RS better RS as it penalizes for adding a variable.
+		> RS is biased as it increases when var is added even if it is not related.
+
+
+	Interpreting Linear Reg Coefficients:
+
+		> R and D spent & marketing spend.
+		> '+' sign indicates directly proportional to profit(dependent var).
+		> Magnitude - R&D per unit has more effect on pofit than marketings per unit(if data ie scale is unclear).
+
+
+
+
+Classification:
+
+Logistic Regression:
+
+	Intuition:
+
+	
