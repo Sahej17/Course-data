@@ -303,4 +303,12 @@ Logistic Regression:
 
 	Intuition:
 
-	
+		> Probability of the guessed outcome.
+		> Apply a sigmoid function to linear reg. 
+		> Flow-
+				Linear reg. eq. -> Sigmoid function -> Logistic reg.
+
+		> Logistic Reg.-
+				ln(p/(1-p)) = b0 + b1*x
+
+		>
