@@ -311,4 +311,80 @@ Logistic Regression:
 		> Logistic Reg.-
 				ln(p/(1-p)) = b0 + b1*x
 
-		>
+		> Here we get y^  and not y as we can get the prob. of a particular case and not the exact value.
+
+	Code using Python:
+
+		Step 1:
+		> Use data preprocessing template.
+		> Problem Statement -
+				Dataset contains info about social users (Use Id, Gender, Age, Estimated Salary, Purchased) is the database of a car company which has recently launched a new SUV and wants to find out which user is going to buy it.
+
+		> Age, estimated salary and purchased are main focus.
+		> Split the dataset (300-train 100-test).
+		> Feature Scaling is to be done.
+
+
+		Step 2:
+		> Fitting log reg to model.
+		> Import lib 
+			from sklearn.linear_model import LogisticRegression
+		> Create object.
+		> Use random_state = 0 parameter to get same results.  
+		
+
+		Step 3:
+		> Predicting the Test set results.
+		> Use predict method.
+		
+
+		Step 4:
+		> Evaluating the results of test set using confusion matrix.
+		> from sklearn.metrics import Confusion_matrix
+		> Here, it is a function as the import part is not in caps.
+		> Parameter used - y_test and y_pred
+
+
+		Step 5:
+		> Visualizing the training set results.
+		> 2 regions red and green classify whether the user bought or did not bought the car(train set).
+		> Visualizing the test set for final results.
+		> ListedColormap method is imported.
+		> For each of the pixel points 0.01 scale we applied the classifier.
+		> Prediction if 0 - Red and 1 - Green.
+		> np.meshgrid is used to arrange the pixels.
+		> plt.contour is used to colourize the parts.
+		> Loop is used in which plt.scatter is used.
+
+	Python Classification Template:
+
+		> Only lib imported are changed when algo. is changed.
+	
+
+K-Nearest Neighbours:
+
+	Intuition:
+
+		> Steps:
+				1. Choose no. of k neighbours(5 generally).
+				2. Take the K nearest neighbors of the new data point, according to the euclidean distance.
+				3. Among K neighbors, count the number of data points in that category.
+				4. Assign the new data point to the category where you counted the most neighbours.
+				5. Your model is ready.
+
+		> Euclidean distance = ((x2-x1)^2+(y2-y1)^2)^1/2
+
+	Python Code:
+
+		> Use classification template.
+		> Create the classifier (import lib, create object, fit the object).
+		> from sklearn.neighbors import KNeighborsClassifier
+		> classifier = KNeighborsClassifier
+		> Parameters used - n_neighbors(5), metric(metric = 'minkowski') & p(p=2 euclidean distance).
+		> Confusion matrix is used.
+		> Non linear graph -> Non linear classifier.
+
+
+Support Vector Machines(SVM):
+
+	
