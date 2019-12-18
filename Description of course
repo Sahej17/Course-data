@@ -387,4 +387,20 @@ K-Nearest Neighbours:
 
 Support Vector Machines(SVM):
 
-	
+	Intuition:
+	> A line is selected with maximum margin and max dist between support vectors.
+	> The line is known as max margin hyperplane or max margin classifier.
+	> There are two sub parts postive hyperplane and negative hyperplane.
+	> This algo. differentiates using the boundary conditions (in case of apple and oranges , SVm will take apple that look like oranges and compare).
+	> This boundary values are known as support vectors.
+
+	Implementation:
+	> Use classifier template.
+	> Change names.
+	> Create, fit and enter classifier.
+	> from sklearn.svm import SVC
+	> Parameters used : Kernel='linear', random_state(to get same result as in tutorial), C
+
+Kernel SVM:
+
+
