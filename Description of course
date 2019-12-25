@@ -403,4 +403,8 @@ Support Vector Machines(SVM):
 
 Kernel SVM:
 
-
+	Intuition:
+	> Used in non-linear data.
+	> Mapping to a Higher Dimensional Space.
+	> The Kernel Trick.
+	
