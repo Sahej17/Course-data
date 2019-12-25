@@ -407,4 +407,8 @@ Kernel SVM:
 	> Used in non-linear data.
 	> Mapping to a Higher Dimensional Space.
 	> The Kernel Trick.
-	
+	> Types of kernel functions:
+		1. Guassian RBF Kernel.
+		2. Sigmoid Kernel.
+		3. Polynomial Kernel.
+	>
