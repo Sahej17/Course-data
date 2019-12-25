@@ -410,5 +410,20 @@ Kernel SVM:
 	> Types of kernel functions:
 		1. Guassian RBF Kernel.
 		2. Sigmoid Kernel.
-		3. Polynomial Kernel.
-	>
+		3. Polynomial Kernel and many more.
+	> mlkernels.readthedocs.io -> To see representation of kernels(graphs).
+
+	Kernel SVM in Python:
+	> Data is not linearly seperable here.
+	> Classsifier template used.
+	> Create classifier.
+	> from sklearn.svm import SVC
+	> Parameters used: kernel = 'rbf' and random_state = 0
+	> Predict test results.
+	> To compare the results use confusion matrix.
+	> Visualize the test results.
+
+
+Naive Bayes:
+	
+	
