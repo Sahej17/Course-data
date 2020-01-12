@@ -425,5 +425,9 @@ Kernel SVM:
 
 
 Naive Bayes:
+
+	> P(A|B)=(P(B|A) * P(A)) / (P(B))
+	> Understanding P(A), P(B), P(A|B) and P(B|A). 
+	> 
 	
 	
